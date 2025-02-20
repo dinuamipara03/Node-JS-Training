@@ -97,3 +97,39 @@ var Square1 = /** @class */ (function (_super) {
 }(Rectangle2));
 var mySq1 = new Square1(20);
 console.log(mySq1.toString());
+//abstract class
+var Animal = /** @class */ (function () {
+    function Animal(name) {
+        this.name = name;
+    }
+    Animal.prototype.move = function () {
+        console.log("".concat(this.name, " is moving."));
+    };
+    return Animal;
+}());
+var Dog = /** @class */ (function (_super) {
+    __extends(Dog, _super);
+    function Dog() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Dog.prototype.makeSound = function () {
+        console.log("".concat(this.name, " says: Woof!"));
+    };
+    return Dog;
+}(Animal));
+var Cat = /** @class */ (function (_super) {
+    __extends(Cat, _super);
+    function Cat() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Cat.prototype.makeSound = function () {
+        console.log("".concat(this.name, " says: Meow!"));
+    };
+    return Cat;
+}(Animal));
+var dog = new Dog('Buddy');
+var cat = new Cat('Whiskers');
+dog.makeSound();
+dog.move();
+cat.makeSound();
+cat.move();

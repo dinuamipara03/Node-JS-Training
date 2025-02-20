@@ -123,3 +123,35 @@ interface Shape {
   const mySq1 = new Square1(20);
   
   console.log(mySq1.toString());
+
+  //abstract class
+  abstract class Animal {
+    constructor(public name: string) { }
+
+    abstract makeSound(): void;
+
+    move(): void {
+        console.log(`${this.name} is moving.`);
+    }
+}
+
+class Dog extends Animal {
+    makeSound(): void {
+        console.log(`${this.name} says: Woof!`);
+    }
+}
+
+class Cat extends Animal {
+    makeSound(): void {
+        console.log(`${this.name} says: Meow!`);
+    }
+}
+
+const dog = new Dog('Buddy');
+const cat = new Cat('Whiskers');
+
+dog.makeSound();
+dog.move();
+
+cat.makeSound();
+cat.move(); 
