@@ -97,7 +97,7 @@ var Square1 = /** @class */ (function (_super) {
 }(Rectangle2));
 var mySq1 = new Square1(20);
 console.log(mySq1.toString());
-//abstract class
+//abstract class - An abstract class is a class that cannot be instantiated directly. Instead, it serves as a blueprint for other classes. 
 var Animal = /** @class */ (function () {
     function Animal(name) {
         this.name = name;

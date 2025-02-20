@@ -124,7 +124,7 @@ interface Shape {
   
   console.log(mySq1.toString());
 
-  //abstract class
+  //abstract class - An abstract class is a class that cannot be instantiated directly. Instead, it serves as a blueprint for other classes. 
   abstract class Animal {
     constructor(public name: string) { }
 
