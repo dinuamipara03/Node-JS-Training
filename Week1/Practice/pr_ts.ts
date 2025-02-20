@@ -123,7 +123,7 @@ class Car{
         this.brand=brand;this.year=year;
     }
     public getCarInfo():string|number{
-        return "Brand is " + this.brand +"and year is " + this.year
+        return "Brand is " + this.brand +" and year is " + this.year
     }
 }
 let car = new Car("Kia", 2022)

@@ -97,7 +97,7 @@ var Car = /** @class */ (function () {
         this.year = year;
     }
     Car.prototype.getCarInfo = function () {
-        return "Brand is " + this.brand + "and year is " + this.year;
+        return "Brand is " + this.brand + " and year is " + this.year;
     };
     return Car;
 }());
