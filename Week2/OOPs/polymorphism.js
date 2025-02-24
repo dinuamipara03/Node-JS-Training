@@ -1,4 +1,4 @@
-// Method Overriding:
+// Method Overriding
 class Animal {
     speak() {
         console.log("Animal makes a sound");
@@ -23,7 +23,7 @@ dog.speak();
 const cat = new Cat();
 cat.speak();  
 
-// Method Overloading (simulated):\
+// Method Overloading (simulated)
 class Calculator {
     add(a, b) {
         if (b === undefined) {
