@@ -19,7 +19,7 @@ console.log(bike2.maker); // Kawasaki
 console.log(bike1.getDetails());
 
 //Ex2
-// Defining class in a Traditional Way.
+// Defining class in a Traditional Way
 function Vehicle1(name, maker, engine) {
 	this.name = name,
 		this.maker = maker,
