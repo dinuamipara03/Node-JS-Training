@@ -1,4 +1,4 @@
-// Encapsulation example
+// Encapsulation example 
 class person {
 	constructor(name, id) {
 		this.name = name;
