@@ -67,7 +67,64 @@ type User = {
 
 // Template Literal Types - Mapped types which change properties via template literal strings
 type Direction = "Up" | "Down" | "Left" | "Right";
-
 let move: Direction;
-
 move = "Up"; 
+console.log(move)
+
+//union
+function printStatusCode(code: string | number) {
+    console.log(`My status code is ${code}.`)
+  }
+  console.log(printStatusCode(404));
+  console.log(printStatusCode('404'));
+
+  //intersection
+    type Dog1 = {
+    name: string;
+    breed: string;
+    bark: () => void;
+    };
+
+    type Bird = {
+        name: string;
+        wingspan: number;
+        fly: () => void;
+    };
+
+    // Create an intersection type
+    type HybridAnimal = Dog1 & Bird;
+
+    // Create an object of the intersection type
+    const hybridPet: HybridAnimal = {
+        name: "Griffin",
+        breed: "Labrador",
+        wingspan: 1.2,
+        bark: () => console.log("Woof!"),
+        fly: () => console.log("Flap, flap!"),
+    };
+
+    // Access properties and methods
+    console.log(hybridPet.name);
+    console.log(hybridPet.wingspan);
+    hybridPet.bark();
+    hybridPet.fly(); 
+
+    //Alias
+    type Point = {
+        x: number;
+        y: number;
+    };
+    
+    type Shape = "circle" | "square" | "rectangle";
+    
+    function drawShape(shape: Shape, position: Point): void {
+        console.log(`Drawing a ${shape} at (${position.x}, ${position.y})`);
+    }
+    
+    drawShape("circle", { x: 10, y: 20 });
+
+    //Assertion
+    let value: any = "This is a string";
+    let lengthOfString: number = (value as string).length;
+
+    console.log(lengthOfString);
