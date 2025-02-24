@@ -1,4 +1,4 @@
-// Inheritance example
+// Inheritance example 
 class person {
 	constructor(name) {
 		this.name = name;
