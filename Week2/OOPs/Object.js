@@ -1,4 +1,4 @@
-// Object Literal
+// Object Literal 
 // Defining object
 let person = {
 	first_name: 'Mukul',
