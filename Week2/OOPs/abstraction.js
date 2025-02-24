@@ -1,4 +1,3 @@
-
 // Abstraction example
 function per(fname, lname) {
 	let firstname = fname;
