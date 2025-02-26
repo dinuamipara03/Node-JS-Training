@@ -53,3 +53,4 @@ Offline Mode: Yarn allows developers to install packages offline, useful for env
 Disk Space Efficiency: pnpm reduces disk space usage by using hard links and a single store for all packages.
 Flat Node Modules: pnpm avoids nesting node_modules directories, resulting in a flatter project structure.
 Parallel Installation: Similar to Yarn, pnpm installs packages concurrently for faster installations.
+
