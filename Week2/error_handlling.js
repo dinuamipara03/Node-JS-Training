@@ -10,29 +10,29 @@ The throw statement defines a custom error.
 
 function f() {
     try {
-      console.log(0);
-      throw "bogus";
+        console.log(0);
+        throw "bogus";
     } catch (e) {
-      console.log(1);
-      // This return statement is suspended
-      // until finally block has completed
-      return true;
-      console.log(2); // not reachable
+        console.log(1);
+        // This return statement is suspended
+        // until finally block has completed
+        return true;
+        console.log(2); // not reachable
     } finally {
-      console.log(3);
-      return false; // overwrites the previous "return"
-      console.log(4); // not reachable
+        console.log(3);
+        return false; // overwrites the previous "return"
+        console.log(4); // not reachable
     }
     // "return false" is executed now
     console.log(5); // not reachable
-  }
-  console.log(f()); // 0, 1, 3, false
-  
-  //try-catch
-  try {
+}
+console.log(f()); // 0, 1, 3, false
+
+//try-catch
+try {
     let json = '{"name":"Jale", "age":30}';
     let user = JSON.parse(json);
-  
+
     if (!user.email) {
         throw new SyntaxError("Field 'email' not found in JSON.");
     }
