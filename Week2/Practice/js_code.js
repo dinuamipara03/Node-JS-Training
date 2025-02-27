@@ -41,3 +41,17 @@ function factorial(n){
     return n*factorial(n-1);
 }}
 console.log(factorial(5));
+
+//Write a JavaScript function to check if a given number is prime. 
+function isPrime(num){
+    if (num<=0){
+        console.log("Please enter number more than zero.")
+    }else if(num==1){
+        console.log("Prime")
+    }else{
+        for(i=2;i<num/2;i++){
+            console.log(num%i==0?"Not Prime":"Prime");
+        }
+    }
+}
+isPrime(5)
