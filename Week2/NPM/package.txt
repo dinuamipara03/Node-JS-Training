@@ -1,0 +1,65 @@
+Creating and publishing unscoped public packages
+
+            On the command line, create a directory for your package:
+                mkdir my-test-package
+
+            Navigate to the root directory of your package:
+                cd my-test-package
+
+            If you are using git to manage your package code, in the package root directory, run the following commands, replacing git-remote-url with the git remote URL for your package:
+                git init
+                git remote add origin git://git-remote-url
+                
+            In the package root directory, run the npm init command.
+
+            Respond to the prompts to generate a package.json file. For help naming your package, see "Package name guidelines".
+
+            Testing your package
+            To reduce the chances of publishing bugs, we recommend testing your package before publishing it to the npm registry. To test your package, run npm install with the full path to your package directory:
+                npm install path/to/my-package
+
+            Publishing unscoped public packages
+            On the command line, navigate to the root directory of your package.
+                cd /path/to/package
+            To publish your public package to the npm registry, run:
+                npm publish
+
+
+Creating and publishing scoped public packages
+
+            If you are using npmrc to manage accounts on multiple registries, on the command line, switch to the appropriate profile:
+                npmrc <profile-name>
+
+            On the command line, create a directory for your package:
+                mkdir my-test-package
+
+            Navigate to the root directory of your package:
+                cd my-test-package
+
+            If you are using git to manage your package code, in the package root directory, run the following commands, replacing git-remote-url with the git remote URL for your package:
+                git init
+                git remote add origin git://git-remote-url
+
+            In the package root directory, run the npm init command and pass the scope to the scope flag:
+
+            For an organization-scoped package, replace my-org with the name of your organization:
+                npm init --scope=@my-org
+            For a user-scoped package, replace my-username with your username:
+                npm init --scope=@my-username
+                
+            Respond to the prompts to generate a package.json file. For help naming your package, see "Package name guidelines".
+
+            Create a README file that explains what your package code is and how to use it.
+
+            Testing your package
+            To reduce the chances of publishing bugs, we recommend testing your package before publishing it to the npm registry. To test your package, run npm install with the full path to your package directory:
+                npm install my-package
+
+            Publishing scoped public packages
+            By default, scoped packages are published with private visibility. To publish a scoped package with public visibility, use npm publish --access public.
+            On the command line, navigate to the root directory of your package.
+                cd /path/to/package
+            To publish your scoped public package to the npm registry, run:
+                npm publish --access public
+
+                
