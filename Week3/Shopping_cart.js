@@ -12,7 +12,7 @@
 // Use arrow functions where applicable.
 
 function createCart() {
-  const cart = [];//private
+  const cart = [];
 
   const addItem = (item) => {
     if(item==null) return console.log("Item can't be null");
@@ -32,6 +32,7 @@ function createCart() {
 };
 
 const cart = createCart();
+cart.viewCart();
 cart.addItem();
 cart.addItem("Shirt");
 cart.addItem("Shoes");
