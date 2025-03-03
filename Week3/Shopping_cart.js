@@ -15,7 +15,7 @@ function createCart() {
   const cart = [];
 
   const addItem = (item) => {
-    if(item==null) return console.log("Item can't be null");
+    if(item==null) return console.log("Item can't be empty");
     cart.push(item);
     return console.log("Item added to cart:", item);
   };
