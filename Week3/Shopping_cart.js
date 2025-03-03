@@ -21,8 +21,7 @@ function createCart() {
   };
 
   const removeItem = (item) => {
-   (!cart.includes(item))?console.log("Item not found in cart:",item):  cart.splice(cart.indexOf(item), 1);
-    return cart;
+    return (!cart.includes(item))?console.log("Item not found in cart:",item):  cart.splice(cart.indexOf(item), 1);
   };
 
   const viewCart = () => {
