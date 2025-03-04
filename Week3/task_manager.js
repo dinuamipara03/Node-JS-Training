@@ -12,7 +12,6 @@ const rl = readline.createInterface({
 
 const tasksFile = 'file.json';
 
-
 function loadTasks() {
     try {
         return JSON.parse(fs.readFileSync(tasksFile, 'utf8'));
