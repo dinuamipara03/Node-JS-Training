@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Run",
+    "description": "Running 500 m",
+    "dueDate": "5 march"
+  },
+  {
+    "title": "Drawing",
+    "description": "Draw cat",
+    "dueDate": "6 march"
+  },
+  {
+    "title": "Jumping",
+    "description": "Jump high",
+    "dueDate": "6 march"
+  },
+  {
+    "title": "Playing",
+    "description": "Play football",
+    "dueDate": "7 march"
+  },
+  {
+    "title": "Washing",
+    "description": "Wash your plates",
+    "dueDate": "5 march"
+  },
+  {
+    "title": "Homework",
+    "description": "Finish your work",
+    "dueDate": "8 march"
+  },
+  {
+    "title": "Shopping",
+    "description": "Go to shopping",
+    "dueDate": "8 march"
+  },
+  {
+    "title": "Project making",
+    "description": "Make todo list",
+    "dueDate": "9 march"
+  }
+]
