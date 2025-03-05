@@ -8,6 +8,7 @@
 // reset(): Resets the counter back to 0.
 // The counter value should be private (use a closure).
 // Use arrow functions where possible.
+
 function createCounter() {
   let count = 0;
   let interval;
