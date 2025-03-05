@@ -1,7 +1,7 @@
 function palindrome(str: string): string {
     const res: string = str.replace(/[\s.,]/g, '').trim();
     const reversed: string = res.split('').reverse().join('');
-    return res === reversed ? "Palindrome: " + res : "Not Palindrome: " + res;
+    return res === reversed ? "Palindrome: " + res : "Not Palindrome: " + res; 
 }
 
 console.log(palindrome("bar, rab")); 
