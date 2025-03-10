@@ -4,4 +4,4 @@
 
 -- SELECT * FROM Employees WHERE City LIKE '_aipur';
 
-SELECT * FROM Employees WHERE City LIKE 'Ja__ur';
+SELECT * FROM Employees WHERE City LIKE 'Ja__ur'; 
