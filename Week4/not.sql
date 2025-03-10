@@ -1,1 +1,1 @@
-SELECT * FROM Employees WHERE NOT city = 'Surat';
+SELECT * FROM Employees WHERE NOT city = 'Surat'; 
