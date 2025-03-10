@@ -3,4 +3,4 @@
 -- SELECT * FROM Employees ORDER BY City, Department;
 
 SELECT * FROM Employees
-ORDER BY City ASC, EmpName DESC;
+ORDER BY City ASC, EmpName DESC; 
