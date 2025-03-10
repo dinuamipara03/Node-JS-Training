@@ -1,1 +1,1 @@
-DELETE FROM Employees WHERE EmpName='Aditya Rav';
+DELETE FROM Employees WHERE EmpName='Aditya Rav'; 
