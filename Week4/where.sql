@@ -6,4 +6,4 @@
 
 -- SELECT * FROM Employees WHERE City LIKE 'P%';
 
-SELECT * FROM Employees WHERE City IN ('Delhi','Jaipur');
+SELECT * FROM Employees WHERE City IN ('Delhi','Jaipur'); 
