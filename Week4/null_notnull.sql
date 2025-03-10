@@ -1,3 +1,3 @@
 SELECT EmpName, MobileNo, City
 FROM Employees
-WHERE City IS NOT NULL;
+WHERE City IS NOT NULL; 
