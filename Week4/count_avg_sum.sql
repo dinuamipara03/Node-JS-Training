@@ -2,4 +2,4 @@
 
 -- SELECT AVG(Salary) FROM Employees;
 
-SELECT SUM(Salary) FROM Employees;
+SELECT SUM(Salary) FROM Employees; 
