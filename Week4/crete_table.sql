@@ -9,4 +9,4 @@ CREATE TABLE Employees (
     Designation VARCHAR(50),  
     JoiningDate DATE,  
     Email VARCHAR(100) UNIQUE  
-);
+); 
