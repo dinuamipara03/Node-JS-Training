@@ -3,7 +3,7 @@
 -- SELECT * FROM Employees WHERE EmpName LIKE '%a';
 
 -- SELECT * FROM Employees WHERE EmpName LIKE '%ja%';
-
+ 
 -- SELECT * FROM Employees WHERE EmpName LIKE '_i%';
 
 -- SELECT * FROM Employees WHERE EmpName LIKE 's__%';
