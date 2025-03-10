@@ -22,4 +22,4 @@ INSERT INTO Employees (EmpName, Salary, MobileNo, City, Department, Designation,
 ('Ramesh Iyer', 46000, '9901234568', 'Mysore', 'Sales', 'Regional Sales Manager', '2018-09-15', 'ramesh.iyer@example.com'),  
 ('Neha Agarwal', 72000, '9012345679', 'Dehradun', 'HR', 'Training Manager', '2017-12-20', 'neha.agarwal@example.com'),  
 ('Ankit Saxena', 54000, '9123456782', 'Bhubaneswar', 'Finance', 'Tax Consultant', '2021-03-14', 'ankit.saxena@example.com'),  
-('Pallavi Tiwari', 69000, '9234567892', 'Trivandrum', 'Operations', 'Logistics Coordinator', '2019-07-29', 'pallavi.tiwari@example.com');  
+('Pallavi Tiwari', 69000, '9234567892', 'Trivandrum', 'Operations', 'Logistics Coordinator', '2019-07-29', 'pallavi.tiwari@example.com');   
