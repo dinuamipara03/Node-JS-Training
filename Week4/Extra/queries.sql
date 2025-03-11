@@ -5,7 +5,7 @@
 -- select distinct(MAJOR) from Student;
 
 -- 3. Write a SQL query to print the first 3 characters of FIRST_NAME from Student table.
--- select substring(FIRSTNAME,1,3) from Student;
+-- select substring(FIRSTNAME,1,3) from Student; 
 
 -- 4. Write a SQL query to find the position of alphabet ('a') int the first name column 'Shivansh' from Student table.
 -- select instr(FIRSTNAME,'a') from Student where FIRSTNAME='Shivam';
