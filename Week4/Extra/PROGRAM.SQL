@@ -1,0 +1,7 @@
+use testing;
+create table Program (
+SID INT,
+PROGRAMNAME VARCHAR(25),
+PROGRAM_DATE DATE,
+FOREIGN KEY(SID) REFERENCES Student (SID)
+);
