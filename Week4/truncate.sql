@@ -1,0 +1,3 @@
+-- TRUNCATE TABLE Persons; 
+
+SELECT TRUNCATE(-7767.1160, 2) AS Truncated_Number;
