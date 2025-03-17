@@ -21,7 +21,7 @@ SELECT * FROM test
 SELECT * FROM test
   WHERE last_name='Jones'
   AND (first_name='John' OR first_name='Jon');
-
+ 
 SELECT * FROM test
   WHERE last_name='Jones'
   AND first_name >='M' AND first_name < 'N';
