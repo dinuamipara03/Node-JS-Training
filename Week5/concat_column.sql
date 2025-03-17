@@ -1,1 +1,1 @@
-select concat(FIRSTNAME,' ',LASTNAME) FROM Student;
+select concat(FIRSTNAME,' ',LASTNAME) FROM Student; 
