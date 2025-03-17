@@ -17,7 +17,7 @@ CREATE TABLE customer (
     FOREIGN KEY (salesman_id) REFERENCES salesman(salesman_id)
 );
 
-CREATE TABLE orders (
+CREATE TABLE orders ( 
     ord_no INT PRIMARY KEY,
     purch_amt DECIMAL(10,2) NOT NULL,
     ord_date DATE NOT NULL,
