@@ -15,4 +15,4 @@
 SELECT Student.FIRSTNAME, Program.PROGRAMNAME
 FROM Student
 RIGHT JOIN Program ON Student.SID = Program.SID
-ORDER BY Student.FIRSTNAME;
+ORDER BY Student.FIRSTNAME; 
