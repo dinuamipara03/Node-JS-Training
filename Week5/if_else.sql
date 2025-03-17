@@ -17,3 +17,4 @@
 
 CALL check_salary(27);
 
+ 
