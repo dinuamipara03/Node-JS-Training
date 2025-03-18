@@ -6,7 +6,7 @@
 --     FROM testing.Customer;
 -- END //
 
--- DELIMITER ;
+-- DELIMITER ; 
 
 call hello();
 
