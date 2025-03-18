@@ -1,0 +1,23 @@
+-- DELIMITER //
+-- CREATE FUNCTION calculateGPA()
+-- RETURNS DECIMAL(10,2)
+-- BEGIN
+-- DECLARE RESULT DECIMAL(10,2);
+-- SET RESULT=(SELECT SUM(GPA) FROM Student);
+-- RETURN RESULT;
+-- END //
+-- DELIMITER ;
+
+-- select testing.calculateGPA();
+
+
+-- DELIMITER //
+-- CREATE FUNCTION calculateStudent() RETURNS VARCHAR(255)
+-- BEGIN
+-- DECLARE RES VARCHAR(255);
+-- SET RES= (SELECT COUNT(*) FROM Student);
+-- RETURN RES;
+-- END //
+-- DELIMITER ;
+
+SELECT testing.calculateStudent();
