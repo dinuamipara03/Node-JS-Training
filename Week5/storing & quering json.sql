@@ -15,7 +15,7 @@
 -- INSERT INTO products (name, details) VALUES(
 --     'Iphone',
 --     '{ "model": "16Pro", "price": 80000, "specs": { "ram": "8GB", "storage": "512GB" } }'
--- ),
+-- ), 
 -- (
 --     'PC',
 --     '{ "model": "i3", "price": 24000, "specs": { "ram": "8GB", "storage": "512GB" } }'
