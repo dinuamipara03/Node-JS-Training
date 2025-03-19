@@ -12,7 +12,7 @@
 -- ALTER TABLE test1 ADD FULLTEXT KEY text (text);
 
 -- select * from test1;
-
+  
 -- select *, 
 --     match(text) against ('what') as hasWhat,
 --     match(text) against ('just') as hasJust
