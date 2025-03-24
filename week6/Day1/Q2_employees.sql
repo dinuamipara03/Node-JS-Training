@@ -2,7 +2,7 @@ create database week6;
 use week6;
 
 -- Create a table employees with the following columns:
--- id: Integer, primary key, auto-increment, not null
+-- id: Integer, primary key, auto-increment, not null 
 -- name: String (max 100 characters), not null
 -- department: String (max 50 characters), can be null
 -- salary: Decimal (10,2), can be null
