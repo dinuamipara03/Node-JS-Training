@@ -92,7 +92,8 @@ select * from tickets where status='NEW' or status='INPROGRESS';
 */
 
 -- If a ticket has messages, include the last message details (content, sender, timestamp).
-select user_details.name as sender,messages.content as content,messages.created_at as timestamp from messages inner join user_details on messages.user_id=user_details.id where messages.content is not null;
+select user_details.name as sender,messages.content as content,messages.created_at as timestamp 
+from messages inner join user_details on messages.user_id=user_details.id where messages.content is not null;
 /*
 +------------+-----------------------+---------------------+
 | sender     | content               | timestamp           |
