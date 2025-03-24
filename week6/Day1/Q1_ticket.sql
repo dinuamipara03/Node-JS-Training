@@ -122,8 +122,13 @@ inner join admin_ticket_details on tickets.id=admin_ticket_details.ticket_id whe
 
 -- sorting
 
-SELECT tickets.status,messages.status,messages.created_at
-FROM tickets INNER JOIN messages ON tickets.id = messages.ticket_id
-WHERE tickets.status = 'NEW' OR tickets.status IN (SELECT tickets.status FROM messages INNER JOIN tickets ON tickets.id = messages.ticket_id
-WHERE tickets.status = 'INPROGRESS' AND messages.status = 'UNREAD' order by messages.created_at desc)order by tickets.status desc;
+SELECT tickets.status AS ticket_status, messages.status AS message_status, messages.created_at
+FROM tickets INNER JOIN messages ON tickets.id = messages.ticket_id WHERE tickets.status = 'NEW' OR (tickets.status = 'INPROGRESS' AND messages.status = 'UNREAD') 
+ORDER BY 
+    CASE 
+        WHEN tickets.status = 'NEW' THEN 1
+        WHEN tickets.status = 'INPROGRESS' AND messages.status = 'UNREAD' THEN 2
+        ELSE 3
+    END, 
+    messages.created_at DESC;
 
