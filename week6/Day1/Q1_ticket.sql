@@ -127,15 +127,3 @@ FROM tickets INNER JOIN messages ON tickets.id = messages.ticket_id
 WHERE tickets.status = 'NEW' OR tickets.status IN (SELECT tickets.status FROM messages INNER JOIN tickets ON tickets.id = messages.ticket_id
 WHERE tickets.status = 'INPROGRESS' AND messages.status = 'UNREAD' order by messages.created_at desc)order by tickets.status desc;
 
-/*
-+------------+--------+---------------------+
-| status     | status | created_at          |
-+------------+--------+---------------------+
-| NEW        | READ   | 2025-03-24 10:53:49 |
-| NEW        | READ   | 2025-03-24 10:53:49 |
-| NEW        | UNREAD | 2025-03-24 12:04:45 |
-| INPROGRESS | UNREAD | 2025-03-24 10:53:49 |
-| INPROGRESS | UNREAD | 2025-03-24 10:53:49 |
-| INPROGRESS | UNREAD | 2025-03-24 12:04:45 |
-+------------+--------+---------------------+
-*/
