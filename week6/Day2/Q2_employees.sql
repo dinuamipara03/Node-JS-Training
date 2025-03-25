@@ -162,7 +162,7 @@ USE week6;
 		left join shifts s on es.shift_id=s.id
 		where a.check_in is null;
 		/*
-        +------+--------------+---------------+---------+----------+-----------+
+	        +------+--------------+---------------+---------+----------+-----------+
 		| id   | name         | assigned_date | shifts  | end_time | check_out |
 		+------+--------------+---------------+---------+----------+-----------+
 		|    4 | Sneha Iyer   | 2025-03-10    | NULL    | NULL     | NULL      |
@@ -173,17 +173,16 @@ USE week6;
         
 -- 2. Get employees who worked overtime
 -- Find employees who checked out more than 1 hour after their scheduled shift ended.
-		select e.id, e.name, a.date, s.name AS shift,s.end_time, a.check_out
+		select distinct e.id, e.name, a.date, s.name AS shift,s.end_time, a.check_out
 		from attendance a
 		left join employees e ON a.employee_id = e.id
 		left join shifts s ON a.shift_id = s.id
 		where a.check_out > timestamp(a.date, s.end_time) + interval 1 hour;-- convert time to timestamp
-        /*
-        +------+-------------+------------+---------+----------+---------------------+
+	        /*
+	        +------+-------------+------------+---------+----------+---------------------+
 		| id   | name        | date       | shift   | end_time | check_out           |
 		+------+-------------+------------+---------+----------+---------------------+
 		|    1 | Amit Sharma | 2025-03-20 | Morning | 16:00:00 | 2025-03-20 17:30:00 |
-		|    2 | Priya Verma | 2025-03-18 | Evening | 22:00:00 | 2025-03-18 23:30:00 |
 		|    2 | Priya Verma | 2025-03-18 | Evening | 22:00:00 | 2025-03-18 23:30:00 |
 		+------+-------------+------------+---------+----------+---------------------+
 		*/
