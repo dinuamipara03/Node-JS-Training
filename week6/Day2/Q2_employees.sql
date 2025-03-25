@@ -156,14 +156,14 @@ USE week6;
 
 -- 1. Retrieve employees with missing attendance
 -- Find all employees who were assigned a shift but did not check in on a given date.
-		select e.id,e.name,es.assigned_date,s.name as shifts,s.end_time,a.check_out from employee_shifts es
+		select e.id,e.name,es.assigned_date,s.name as shifts,s.end_time,a.check_in from employee_shifts es
 		left join employees e on es.employee_id=e.id
 		left join attendance a on es.employee_id=a.employee_id
 		left join shifts s on es.shift_id=s.id
 		where a.check_in is null;
 		/*
 	        +------+--------------+---------------+---------+----------+-----------+
-		| id   | name         | assigned_date | shifts  | end_time | check_out |
+		| id   | name         | assigned_date | shifts  | end_time | check_in  |
 		+------+--------------+---------------+---------+----------+-----------+
 		|    4 | Sneha Iyer   | 2025-03-10    | NULL    | NULL     | NULL      |
 		|    6 | Rajesh Gupta | 2025-03-01    | Night   | 06:00:00 | NULL      |
