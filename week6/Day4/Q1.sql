@@ -106,25 +106,17 @@ from salaries;
 
 -- 3. CTE for Active Project Employees
 -- Find employees actively working on projects in February 2024. Change to february 2025 as per data
-with emp as(select e.id,e.name,p.start_date,p.end_date,ep.created_at from employees e 
-inner join projects p on p.department_id=e.department_id 
+with emp as(select e.id,e.name,p.start_date,p.end_date,ep.created_at from employees e
 inner join emp_projects ep on ep.employee_id=e.id 
+inner join projects p on p.id=ep.project_id 
 where p.start_date<='2025-02-28' and p.start_date>='2025-02-01')
-select id,name,start_date,created_at from emp;
-
-with emp as(select e.id,e.name,p.start_date,p.end_date,ep.created_at from employees e 
-inner join projects p on p.department_id=e.department_id 
-inner join emp_projects ep on ep.employee_id=e.id 
-where extract(month from p.start_date)=2 and extract(year from p.start_date)=2025 and extract(month from ep.created_at)=2 and extract(year from ep.created_at)=2025)
 select id,name,start_date,created_at from emp;
 
 -- 4. Use of UNION & UNION ALL
 -- Find all employees who either have a salary entry or are assigned to a project.
-SELECT id, name FROM employees 
-WHERE id IN (SELECT DISTINCT employee_id FROM salaries)
-UNION 
-SELECT id, name FROM employees 
-WHERE id IN (SELECT DISTINCT employee_id FROM emp_projects);
+SELECT e.id, e.name FROM employees e join salaries s on s.employee_id=e.id
+UNION All
+SELECT e.id, e.name FROM employees e join emp_projects ep on ep.employee_id=e.id;
 
 -- 5. Performance Optimization with Indexing
 -- Create an index to speed up salary queries.
