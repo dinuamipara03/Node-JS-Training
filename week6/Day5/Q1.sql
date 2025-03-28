@@ -64,16 +64,16 @@ insert into products(name,category,price)values
 ('Stove','Kitchen',3000);
 
 insert into orders(user_id,total_amount,order_date,status)values
-(1,5000,'2022-05--05','Pending'),
-(2,2000,'2022-06--01','Pending'),
-(3,5000,'2023-07--10','Pending'),
-(4,3000,'2023-08--05','Shipped'),
-(5,6000,'2024-09--12','Shipped'),
-(6,25000,'2024-10--05','Shipped'),
-(8,10000,'2025-11--05','Delivered');
+(1,5000,'2022-05-05','Pending'),
+(2,2000,'2022-06-01','Pending'),
+(3,5000,'2023-07-10','Pending'),
+(4,3000,'2023-08-05','Shipped'),
+(5,6000,'2024-09-12','Shipped'),
+(6,25000,'2024-10-05','Shipped'),
+(8,10000,'2025-11-05','Delivered');
 insert into orders(user_id,total_amount,order_date,status)values
-(1,7000,'2022-06--05','Pending'),
-(2,8000,'2022-08--01','Pending');
+(1,7000,'2022-06-05','Pending'),
+(2,8000,'2022-08-01','Pending');
 insert into order_items(order_id,product_id,quantity)values
 (1,1,10),
 (3,2,10),
