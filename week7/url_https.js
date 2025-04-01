@@ -13,7 +13,7 @@
 
 // Examples:
 // /images/logo.png (relative to the root directory)
-// ../styles.css (relative to the parent directory)
+// ../styles.css (relative to the parent directory) 
 // ./page.html (relative to the current directory)
 
 
