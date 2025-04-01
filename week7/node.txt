@@ -1,6 +1,6 @@
 What is Node.js?
 
-Node.js is a JavaScript runtime environment built on Chrome's V8 engine. It allows JavaScript to be executed outside the browser, primarily for building scalable and high-performance backend applications. Node.js is known for its event-driven, non-blocking I/O model, which makes it efficient and lightweight.
+Node.js is a JavaScript runtime environment built on Chrome's V8 engine. It allows JavaScript to be executed outside the browser, primarily for building scalable and high-performance backend applications. Node.js is known for its event-driven, non-blocking I/O model, which makes it efficient and lightweight. 
 
 How Node.js Works?
 
