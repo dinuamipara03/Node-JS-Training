@@ -14,7 +14,7 @@ app.use('/user/:id', (req, res, next) => {
     res.send('USER')
     next()
   }, (req, res, next) => {
-    console.log('Request Type:', req.method)
+    console.log('Request Type:', req.method) 
     next()
   })
 app.listen(port, () => {
