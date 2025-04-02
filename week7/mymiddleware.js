@@ -4,4 +4,4 @@ module.exports = function (options) {
         res.send('Hello from my middleware')
       next()
     }
-  }
+  } 
