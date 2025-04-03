@@ -1,0 +1,126 @@
+Middlewares
+
+body-parser 
+    Parse incoming request bodies in a middleware before your handlers, available under the req.body property.
+    npm install body-parser
+    const bodyParser = require('body-parser')
+
+compression
+    The following compression codings are supported:
+        deflate: is a lossless data compression algorithm that combines the LZ77 algorithm with Huffman coding to achieve efficient data compression, commonly used in formats like GZIP and PNG. 
+        gzip : encoding is a lossless data compression algorithm, primarily used for compressing files and improving HTTP transfer speeds, based on the DEFLATE algorithm, which combines LZ77 and Huffman coding. 
+        br (brotli): encoding is a newer, more efficient, lossless data compression algorithm than Gzip, used by web servers and content delivery networks to compress HTTP content, resulting in faster website loading times and reduced bandwidth usage. 
+    Compression works by encoding data to reduce its size, making it faster to transmit over the network.
+    npm install compression
+    var compression = require('compression')
+
+connect-rid
+    connect-rid middleware is a tool that generates and attaches a unique request ID to each incoming HTTP request, allowing for easier tracking and debugging of requests as they flow through the application. 
+    npm install connect-rid
+        var rid = require('connect-rid');
+        app.use(rid({
+        // headerName: 'X-RID'
+        }));
+
+cookie-parser
+    Parse Cookie header and populate req.cookies with an object keyed by the cookie names. Optionally you may enable signed cookie support by passing a secret string, which assigns req.secret so it may be used by other middleware.
+    npm install cookie-parser
+    var cookieParser = require('cookie-parser')
+
+cookie-session
+    A user session can be stored in two main ways with cookies: on the server or on the client. This module stores the session data on the client within a cookie, while a module like express-session stores only a session identifier on the client within a cookie and stores the session data on the server, typically in a database.
+        The following points can help you choose which to use:
+        cookie-session does not require any database / resources on the server side, though the total session data cannot exceed the browser’s max cookie size.
+        cookie-session can simplify certain load-balanced scenarios.
+        cookie-session can be used to store a “light” session and include an identifier to look up a database-backed secondary store to reduce database lookups.
+    
+    npm install cookie-session
+
+        var cookieSession = require('cookie-session')
+        var express = require('express')
+
+        var app = express()
+
+        app.use(cookieSession({
+        name: 'session',
+        keys: [/* secret keys */],
+
+        // Cookie Options
+        maxAge: 24 * 60 * 60 * 1000 // 24 hours
+        }))
+
+cors
+    CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+    npm install cors
+        var express = require('express')
+        var cors = require('cors')
+        var app = express()
+
+        app.use(cors())
+
+        app.get('/products/:id', function (req, res, next) {
+        res.json({msg: 'This is CORS-enabled for all origins!'})
+        })
+
+        app.listen(80, function () {
+        console.log('CORS-enabled web server listening on port 80')
+        })
+
+errorhandler
+    This middleware is only intended to be used in a development environment, as the full error stack traces and internal details of any object passed to this module will be sent back to the client when an error occurs.
+    When an object is provided to Express as an error, this module will display as much about this object as possible, and will do so by using content negotiation for the response between HTML, JSON, and plain text.
+    When the object is a standard Error object, the string provided by the stack property will be returned in HTML/text responses.
+    When the object is a non-Error object, the result of util.inspect will be returned in HTML/text responses.
+    For JSON responses, the result will be an object with all enumerable properties from the object in the response.
+
+    npm install errorhandler
+    var errorhandler = require('errorhandler')
+
+morgan
+    Morgan is a popular Node.js middleware for logging HTTP requests, particularly useful in Express.js applications, allowing you to easily log request information like method, URL, status code, and response time, aiding in debugging and monitoring. 
+    npm install morgan
+    var morgan = require('morgan')
+
+multer
+    Multer adds a body object and a file or files object to the request object. The body object contains the values of the text fields of the form, the file or files object contains the files uploaded via the form.
+    npm install --save multer
+
+response-time
+    This module creates a middleware that records the response time for requests in HTTP servers. The “response time” is defined here as the elapsed time from when a request enters this middleware to when the headers are written out to the client.
+
+    npm install response-time
+    var responseTime = require('response-time')
+
+serve-favicon
+    A favicon is a visual cue that client software, like browsers, use to identify a site. For an example and more information, please visit the Wikipedia article on favicons.
+    Why use this module?
+        User agents request favicon.ico frequently and indiscriminately, so you may wish to exclude these requests from your logs by using this middleware before your logger middleware.
+        This module caches the icon in memory to improve performance by skipping disk access.
+        This module provides an ETag based on the contents of the icon, rather than file system properties.
+        This module will serve with the most compatible Content-Type.
+        Note This module is exclusively for serving the “default, implicit favicon”, which is GET /favicon.ico. For additional vendor-specific icons that require HTML markup, additional middleware is required to serve the relevant files, for example serve-static.
+    npm install serve-favicon
+
+serve-index
+    Serves pages that contain directory listings for a given path.
+    npm install serve-index
+    var serveIndex = require('serve-index')
+
+serve-static
+    serve-static is a middleware function used in Express.js applications to serve static files, such as HTML, CSS, JavaScript, and images, from a specified directory. 
+    npm install serve-static
+    var serveStatic = require('serve-static')
+
+session
+    The server will construct a session and save it on the server side after receiving a login request from the client. When the server answers to the client, it transmits a cookie. The unique id for the session that was previously stored on the server will be found in this cookie and will be kept on the client. Every time a request is made to the server, this cookie will be transmitted. To preserve a one-to-one match between a session and a cookie, we use this session ID to look for the session maintained in the database or the session store. As a result, HTTP protocol connections will become stateful.
+    npm install express-session
+    var session = require('express-session')
+
+timeout
+    Times out a request in the Connect/Express application framework.
+    npm install connect-timeout
+
+vhost
+    Vhost middleware, specifically in the context of Express.js, is a tool that allows you to manage and route requests to different handlers based on the hostname or domain name in the request. It essentially enables you to create virtual domains within a single web server application. 
+    npm install vhost
+    var vhost = require('vhost')
