@@ -1,0 +1,47 @@
+1.	toExponential():It presses a number to display in exponential notation, even if the number is in the range of the standard notation of JavaScript.
+2.	toFixed():It formats a number with a specific number of digits to the right of the decimal.
+3.	toLocaleString():It returns a string value version of the current number in a format that may vary according to a browser’s local settings.
+4.	toPrecision():It states how many total digits (including digits to the left and right of the decimal): to display a number. A negative precision runs an error.
+5.	toString():it returns the string representation of the number’s value. The function is passed the radix, an integer between 2 and 36 specifying the base to use for representing numeric values.
+6.	valueOf():It returns the number’s earliest value.
+ 
+1.	charAt():It returns the character at the specified index.
+2.	charCodeAt():It returns a number showing the Unicode value of the character at the given index.
+3.	concat():It combines the text of two strings and gives a new string.
+4.	indexOf():It returns the index within the calling String object of the first occurrence of the specified value, or -1 if not found.
+5.	lastIndexOf():It returns the index within the calling String object of the last occurrence of the specified value, or -1 if not found.
+6.	localeCompare():It returns a number showing whether a reference string comes before or after or is the same as the given string in sort order.
+7.	match():It matches a regular expression against a string.
+8.	replace():It finds a match between a regular expression and a string and replaces the matched substring with a new substring.
+9.	search():It runs the search for a match between a regular expression and a specified string.
+10.	slice():It removes a section of a string and returns a new string.
+11.	split():It splits a String object into an array of strings by separating the string into substrings.
+12.	substr():It returns the characters in a string beginning at the specified location through the specified number of characters.
+13.	substring():It returns the characters in a string between two indexes into the string.
+14.	toLocaleLowerCase():The characters within a string are changed to lower case while respecting the current locale.
+15.	toLocaleUpperCase():The characters within a string are changed to an upper case while respecting the current locale.
+16.	toLowerCase():It returns the calling string value changes to lower case.
+17.	toString():It returns a string showing the specified object.
+18.	toUpperCase():It returns the calling string value changes to uppercase.
+19.	valueOf():It returns the first value of the specified object.
+
+1.	concat():Returns a new array included of this array joined with other arrays (s) and/or value(s).
+2.	every():Returns true if every element in this array satisfies the provided testing function.
+3.	filter():Creates a new array with all of the elements of this array for which the provided filtering function returns true.
+4.	forEach():Calls a function for each element in the array.
+5.	indexOf():Returns the first (least) index of an element within the array equal to the specified value, or -1 if none is found.
+6.	join():Joins all elements of an array into a string.
+7.	lastIndexOf():Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found.
+8.	map():Creates a new array with the results of calling a provided function on every element in this array.
+9.	pop():Removes the last element from an array and returns that element.
+10.	push():Adds one or more elements to the end of an array and returns the new length of the array.
+11.	reduce():Apply a function simultaneously against two values of the array (from left-to-right) to reduce it to a single value.
+12.	reduceRight():Apply a function simultaneously against two values of the array (from right-to-left) to reduce it to a single value.
+13.	reverse():Reverses the order of the elements of an array — the first becomes the last, and the last becomes the first.
+14.	shift():Removes the first element from an array and returns that element.
+15.	slice():Extracts a section of an array and returns a new array.
+16.	some():Returns true if at least one element in this array satisfies the provided testing function.
+17.	sort():Sorts the elements of an array.
+18.	splice():Adds and/or removes elements from an array.
+19.	toString():Returns a string representing the array and its elements.
+20.	unshift():Adds one or more elements to the front of an array and returns the new length of the array.
