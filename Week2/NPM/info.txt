@@ -1,0 +1,43 @@
+npm is the standard package manager for Node.js.
+
+Yarn and pnpm are alternatives to npm cli. 
+
+Installing all dependencies
+npm install
+npm install <package-name>
+
+Often you'll see more flags added to this command:
+--save-dev installs and adds the entry to the package.json file devDependencies
+--no-save installs but does not add the entry to the package.json file dependencies
+--save-optional installs and adds the entry to the package.json file optionalDependencies
+--no-optional will prevent optional dependencies from being installed
+
+Shorthands of the flags can also be used:
+-S: --save
+-D: --save-dev
+-O: --save-optional
+
+Updating packages
+npm update
+npm update <package-name>
+
+Versioning
+In addition to plain downloads, npm also manages versioning, so you can specify any specific version of a package, or require a version higher or lower than what you need.
+npm install <package-name>@<version>
+
+Running Tasks
+npm run <task-name>
+
+{
+  "scripts": {
+    "watch": "webpack --watch --progress --colors --config webpack.conf.js",
+    "dev": "webpack --progress --colors --config webpack.conf.js",
+    "prod": "NODE_ENV=production webpack -p --config webpack.conf.js"
+  }
+}
+So instead of typing those long commands, which are easy to forget or mistype, you can run
+
+$ npm run watch does the same, but then it stays active and "watches" for updates to your .vue and .js files. If it detects a change, it'll re-build the browser-friendly file so you can just refresh the page.
+$ npm run dev combines all your Vue components and other JavaScript files into a browser-friendly combined file.
+$ npm run prod will compress your js/css files, remove comments, and exclude development-specific features or config.
+

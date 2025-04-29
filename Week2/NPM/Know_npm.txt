@@ -1,0 +1,56 @@
+What are packages?
+Packages are the building blocks of Node.js projects. They are reusable modules of code that you can integrate into your applications to add specific features or functionalities. NPM hosts a vast repository of packages that cover a wide range of purposes, from utility functions to complex frameworks.
+
+What is the NPM Registry?
+The npm registry is a centralized and public repository that serves as the primary source for hosting Node.js packages. It is a massive collection of open-source JavaScript packages, modules, and libraries, allowing developers to easily discover, share, and distribute code. The default npm registry is located at https://registry.npmjs.org/, and it is maintained by the Node.js Foundation.
+
+Semantic Versioning (SemVer)
+Understanding version numbers is crucial when working with packages. Semantic Versioning, or SemVer, follows the MAJOR.MINOR.PATCH format, indicating compatibility changes, additions, and bug fixes. This ensures smooth collaboration and prevents unexpected issues.
+
+Here’s a breakdown of each part:
+MAJOR version: Increments when there are incompatible changes that require users to update their code. Example: 1.0.0 to 2.0.0
+MINOR version: Increases for backward-compatible new features or enhancements. Example: 1.2.3 to 1.3.0
+PATCH version: Bumps for backward-compatible bug fixes. Example: 1.2.3 to 1.2.4
+
+Symbols in semantic versioning:
+Caret (^): Allows changes that do not modify the left-most non-zero digit. For example, ^1.2.3 allows versions 1.x.x but not 2.0.0.
+Tilde (~): Allows patch-level changes, assuming backward compatibility. For example, ~1.2.3 allows versions 1.2.x but not 1.3.0.
+
+Install packages:
+npm install    // local
+npm ci         // in pipeline
+npm install package-name
+npm install package-name@version
+npm install package-name --save-dev  // == npm i package-name -D
+
+Update packages:
+npm outdated    // scope: root project
+npm outdated -a // scope: all outdated packages
+npm update
+npm update package-name
+
+Uninstall packages:
+npm uninstall package-name
+
+List / Run commands (list under Scripts):
+npm run // lists existing commands
+npm run command // runs the command
+
+Aliases and Shorthands
+-v: --version // npm -v
+-y: --yes // npm init -y
+-f: --force // npm cache clean -f
+-D: --save-dev // npm i package-name -D
+-g: --global // npm i package-name -g
+-a: --all // npm outdated -a
+
+The Most Popular NPM Alternatives
+1. Yarn
+Speed: Yarn is known for its speed, thanks to parallel installations and caching mechanisms.
+Deterministic: Yarn ensures deterministic installs by using a lock file (yarn.lock), leading to consistent builds across different environments.
+Offline Mode: Yarn allows developers to install packages offline, useful for environments with limited internet access.
+2. pnpm
+Disk Space Efficiency: pnpm reduces disk space usage by using hard links and a single store for all packages.
+Flat Node Modules: pnpm avoids nesting node_modules directories, resulting in a flatter project structure.
+Parallel Installation: Similar to Yarn, pnpm installs packages concurrently for faster installations.
+
