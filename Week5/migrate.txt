@@ -1,0 +1,27 @@
+A migration is just a single file with sql queries to update a database schema and apply new changes to an existing database.
+Two methods: UP and DOWN
+
+In TypeORM, migrations are crucial for safely managing database schema changes over time, allowing you to evolve your application's database structure without data loss or downtime. They involve creating SQL scripts that define schema changes, which TypeORM then applies to the database. 
+
+What are Migrations?
+Version Control for Databases:Migrations act as a version control system for your database schema, enabling you to track and manage changes over time. 
+Schema Updates:They contain SQL queries that define how to update the database schema, such as adding tables, columns, or indexes. 
+Safe Changes:Migrations allow you to make changes to your database schema in a controlled and safe manner, reducing the risk of data loss or corruption. 
+
+Why are Migrations Important?
+Collaboration:In team environments, migrations ensure that everyone is working with the same database schema version, preventing conflicts and inconsistencies. 
+Production Deployments:Migrations are essential for deploying database schema changes to production environments without downtime or data loss. 
+Data Integrity:By using migrations, you can ensure that your database schema is always in a consistent and valid state. 
+
+How to Migrate in TypeORM?
+1. Generate Migration Files:Use the typeorm migration:generate command to automatically generate a migration file based on the changes you've made to your entities.
+TypeORM will compare your current entities with the database schema and generate the necessary SQL queries.
+2. Review and Modify:Review the generated migration file and make any necessary modifications or adjustments.you can add custom SQL queries or data migration logic as needed.
+3. Run Migrations:Use the typeorm migration:run command to apply the migrations to your database.TypeORM will execute the SQL queries in the migration file and update the database schema.
+4. Revert Migrations (Optional):If you need to revert a migration, use the typeorm migration:revert command.TypeORM will execute the SQL queries in the down method of the migration file, reverting the changes. 
+
+Where to Use Migrations?
+NestJS Applications:Migrations are a crucial part of managing database schemas in NestJS applications using TypeORM. 
+Any TypeORM Project:You can use migrations in any project that uses TypeORM to manage database schema changes. 
+Production Environments:Migrations are essential for deploying database schema changes to production environments. 
+Team Collaboration:Migrations are helpful for team environments where multiple developers are working on the same database. 
