@@ -1,0 +1,27 @@
+Types:
+
+Boolean
+        If true, the client’s IP address is understood as the left-most entry in the X-Forwarded-For header.
+
+        If false, the app is understood as directly facing the client and the client’s IP address is derived from req.socket.remoteAddress. This is the default setting.
+
+
+IP Address 
+        An IP address, subnet, or an array of IP addresses and subnets to trust as being a reverse proxy. The following list shows the pre-configured subnet names:
+
+        loopback - 127.0.0.1/8, ::1/128
+        linklocal - 169.254.0.0/16, fe80::/10
+        uniquelocal - 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, fc00::/7
+
+
+Number
+        Use the address that is at most n number of hops away from the Express application. req.socket.remoteAddress is the first hop, and the rest are looked for in the X-Forwarded-For header from right to left. A value of 0 means that the first untrusted address would be req.socket.remoteAddress, i.e. there is no reverse proxy.
+
+
+Function
+        Custom trust implementation.
+
+            app.set('trust proxy', (ip) => {
+            if (ip === '127.0.0.1' || ip === '123.123.123.123') return true // trusted IPs
+            else return false
+            })

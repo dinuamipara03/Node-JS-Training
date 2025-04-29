@@ -1,0 +1,111 @@
+What is Node.js?
+
+Node.js is a JavaScript runtime environment built on Chrome's V8 engine. It allows JavaScript to be executed outside the browser, primarily for building scalable and high-performance backend applications. Node.js is known for its event-driven, non-blocking I/O model, which makes it efficient and lightweight. 
+
+How Node.js Works?
+
+Node.js operates on a single-threaded event loop with non-blocking I/O. It handles multiple requests asynchronously using libuv, which provides an event loop and thread pool for I/O operations.
+
+Clients send requests to the webserver to interact with the web application. Requests can be non-blocking or blocking e.g Querying the data , updating the data or deleting the data .
+Node.js retrieves the incoming requests and adds those requests to the Event Queue.
+The requests are then passed one-by-one through the Event Loop. It checks if the requests are simple enough to not require any external resources.
+Event Loop processes simple requests (non-blocking operations), such as I/O Polling, and returns the responses to the corresponding clients.
+A single thread from the Thread Pool is assigned to a single complex request. This thread is responsible for completing a particular blocking request by accessing the external resources, such as compute, database, file system, etc.
+Once, the task is carried out completely, the response is sent to the Event Loop that in turn sends that response back to the Client.
+
+Working Process:
+  1. Client Request: The client sends a request (HTTP request, file read/write, database query, etc.).
+  2. Event Loop: Node.js adds the request to the event loop.
+  3. Thread Pool: If an I/O operation is required (e.g., reading from a file), it is sent to a background thread (handled by libuv).
+  4. Callback Execution: Once the I/O operation is complete, the callback function is pushed to the event loop.
+  5. Response to Client: The processed data is sent back to the client.
+
+---
+
+Node.js Lifecycle (Execution Process)
+node App.js => Start executing script => Code parsing, Register events and functions => event loop=> keeps on running as long as event are registered.
+1. Initialization: The Node.js process starts when the script is executed.
+2. Event Loop: It continuously listens for events and executes non-blocking code.
+3. I/O Operations Handling: If an I/O operation (DB, file system) is encountered, it is offloaded to the thread pool.
+4. Callback Queue: Completed tasks are placed in the callback queue and executed sequentially.
+5. Process Termination: When there are no more tasks, the process exits.
+
+
+---
+
+What Happens in the Background?
+
+V8 Engine: Converts JavaScript code into machine code.
+Libuv Library: Handles asynchronous tasks (I/O operations, timers, network requests).
+Event Loop: Continuously monitors the call stack and callback queue.
+Thread Pool: Manages heavy operations (file system, cryptography, compression).
+
+
+---
+
+Complexities in Node.js & How to Avoid Them
+
+1. Callback Hell
+
+Problem: Too many nested callbacks make code unreadable and hard to debug.
+Solution: Use Promises and async/await for better readability.
+
+// Using Promises
+readFile("file.txt")
+  .then((data) => processFile(data))
+  .then((result) => saveResult(result))
+  .catch((err) => console.error(err));
+
+// Using async/await
+async function process() {
+  try {
+    const data = await readFile("file.txt");
+    const result = await processFile(data);
+    await saveResult(result);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+2. Blocking the Event Loop
+
+Problem: Performing CPU-intensive tasks (e.g., loops, large computations) blocks other requests.
+Solution: Use worker threads for heavy computations.
+
+const { Worker } = require("worker_threads");
+
+const worker = new Worker("./worker.js"); // Offload task
+worker.on("message", (data) => console.log(data));
+
+3. Memory Leaks
+
+Problem: Unused variables, large buffers, or event listeners piling up cause high memory consumption.
+Solution: Use Garbage Collection, remove event listeners, and use WeakMap.
+
+const cache = new WeakMap(); // Automatically cleans up unreferenced objects
+
+4. Error Handling
+
+Problem: Unhandled errors crash the application.
+Solution: Use try/catch for synchronous code and .catch() for promises.
+
+process.on("uncaughtException", (err) => {
+  console.error("Unexpected Error:", err);
+});
+
+5. Slow Database Queries
+
+Problem: Querying large data synchronously slows down Node.js.
+Solution: Use pagination and indexes in databases.
+
+SELECT * FROM users WHERE age > 20 LIMIT 50 OFFSET 100;
+
+
+
+Libuv:
+Libuv is a C library that provides Node.js with asynchronous I/O capabilities. It handles operations like file system access, networking, and concurrency, allowing Node.js to perform non-blocking operations. Libuv uses an event loop to manage these operations. The event loop continuously monitors for new events, such as incoming requests or completed I/O operations. When an event occurs, the event loop executes the corresponding callback function.
+
+Thread Pool:
+A thread pool is a collection of worker threads that are pre-created and managed, ready to execute tasks, improving performance and resource utilization by reducing the overhead of creating and destroying threads for each task. 
+or
+ A Thread Pool is a collection of worker threads that efficiently execute asynchronous callbacks on behalf of the application.
