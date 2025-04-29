@@ -1,0 +1,2 @@
+-- triggers are used to automatically execute a set of SQL statements in response to certain database events, such as INSERT, UPDATE, or DELETE operations on a table
+CREATE TRIGGER INS_SUM AFTER INSERT ON Student for each row set @SUM = @SUM + NEW.GPA;
