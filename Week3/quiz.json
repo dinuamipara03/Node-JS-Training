@@ -1,0 +1,320 @@
+{
+    "quiz": [
+      {
+        "title": "MySQL",
+        "questions": [
+          {
+            "question": "Which SQL keyword is used to retrieve data from a database?",
+            "options": {
+            "A": "INSERT",
+            "B": "UPDATE",
+            "C": "SELECT",
+            "D": "DELETE"
+            },
+            "answer": "C"
+          },
+          {
+            "question": "What does the 'WHERE' clause do in a SQL query?",
+            "options": {
+            "A": "Sorts the results",
+            "B": "Filters the results",
+            "C": "Groups the results",
+            "D": "Joins tables"
+          },
+            "answer": "B"
+          },
+          {
+            "question": "Which SQL command is used to modify existing data in a table?",
+            "options": {
+            "A": "CREATE",
+            "B": "ALTER",
+            "C": "UPDATE",
+            "D": "INSERT"
+          },
+            "answer": "C"
+          },
+          {
+            "question": "What is the purpose of the 'JOIN' clause in SQL?",
+            "options": {
+            "A": "To filter rows",
+            "B": "To combine rows from two or more tables",
+            "C": "To sort the results",
+            "D": "To delete rows"
+          },
+            "answer": "B"
+          },
+          {
+            "question": "Which SQL keyword is used to sort the result-set in ascending or descending order?",
+            "options": {
+            "A": "GROUP BY",
+            "B": "WHERE",
+            "C": "ORDER BY",
+            "D": "HAVING"
+          },
+            "answer": "C"
+          },
+          {
+            "question": "What is a primary key in a MySQL table?",
+            "options": {
+            "A": "A foreign key",
+            "B": "A unique identifier for a row",
+            "C": "A column containing dates",
+            "D": "A column containing numbers"
+          },
+            "answer": "B"
+          },
+          {
+            "question": "What does the 'GROUP BY' clause do in SQL?",
+            "options": {
+            "A": "Filters the results",
+            "B": "Sorts the results",
+            "C": "Groups rows that have the same values into summary rows",
+            "D": "Joins tables"
+          },
+            "answer": "C"
+          },
+          {
+            "question": "Which SQL command is used to delete a table?",
+            "options": {
+            "A": "REMOVE TABLE",
+            "B": "DROP TABLE",
+            "C": "DELETE TABLE",
+            "D": "ERASE TABLE"
+          },
+            "answer": "B"
+          },
+          {
+            "question": "What is a foreign key in a MySQL table?",
+            "options": {
+            "A": "A primary key",
+            "B": "A key used to link two tables together",
+            "C": "A key that is always null",
+            "D": "A key that contains only question"
+          },
+            "answer": "B"
+          },
+          {
+            "question": "What function is used to count the number of rows in a MySQL table?",
+            "options": {
+            "A": "SUM()",
+            "B": "AVG()",
+            "C": "COUNT()",
+            "D": "MAX()"
+          },
+            "answer": "C"
+          }
+        ]
+      },
+      {
+        "title": "Python",
+        "questions": [
+          {
+            "question": "What is the output of print(2 + 3 * 4)?",
+            "options": {
+            "A": "20",
+            "B": "14",
+            "C": "12",
+            "D": "9"
+          },
+            "answer": "B"
+          },
+          {
+            "question": "Which keyword is used to define a function in Python?",
+            "options": {
+            "A": "function",
+            "B": "def",
+            "C": "define",
+            "D": "fun"
+          },
+            "answer": "B"
+          },
+          {
+            "question": "What data type is used to store a sequence of characters in Python?",
+            "options": {
+            "A": "integer",
+            "B": "float",
+            "C": "string",
+            "D": "boolean"
+          },
+            "answer": "C"
+          },
+          {
+            "question": "How do you create a list in Python?",
+            "options": {
+            "A": "{}",
+            "B": "()",
+            "C": "[]",
+            "D": "<>"
+          },
+            "answer": "C"
+          },
+          {
+            "question": "What is the output of print(type(5.0))?",
+            "options": {
+            "A": "<class 'int'>",
+            "B": "<class 'str'>",
+            "C": "<class 'float'>",
+            "D": "<class 'bool'>"
+          },
+            "answer": "C"
+          },
+          {
+            "question": "Which loop is used to iterate over a sequence in Python?",
+            "options": {
+            "A": "while",
+            "B": "for",
+            "C": "do-while",
+            "D": "repeat"
+          },
+            "answer": "B"
+          },
+          {
+            "question": "What is the purpose of the 'if __name__ == '__main__':' block in Python?",
+            "options": {
+            "A": "To define a class",
+            "B": "To create a module",
+            "C": "To execute code only when the script is run directly",
+            "D": "To import a library"
+          },
+            "answer": "C"
+          },
+          {
+            "question": "How do you add a comment in Python?",
+            "options": {
+            "A": "// comment",
+            "B": "/* comment */",
+            "C": "# comment",
+            "D": "-- comment"
+          },
+            "answer": "C"
+          },
+          {
+            "question": "What is the result of '3' + '4' in Python?",
+            "options": {
+            "A": "7",
+            "B": "34",
+            "C": "Error",
+            "D": "None"
+          },
+            "answer": "B"
+          },
+          {
+            "question": "Which built-in function returns the length of a string, list, or tuple?",
+            "options": {
+            "A": "size()",
+            "B": "count()",
+            "C": "length()",
+            "D": "len()"
+          },
+            "answer": "D"
+          }
+        ]
+      },
+      {
+        "title": "JavaScript",
+        "questions": [
+            {
+                "question": "What is the output of console.log(typeof null)?",
+                "options": {
+                "A": "null",
+                "B": "object",
+                "C": "undefined",
+                "D": "string"
+              },
+                "answer": "B"
+              },
+              {
+                "question": "What does the 'this' keyword refer to in a JavaScript function?",
+                "options": {
+                "A": "The global object",
+                "B": "The function itself",
+                "C": "The object that the function is a method of",
+                "D": "The previous function called"
+              },
+                "answer": "C"
+              },
+              {
+                "question": "Which method is used to add an element to the end of an array in JavaScript?",
+                "options": {
+                "A": "push()",
+                "B": "append()",
+                "C": "add()",
+                "D": "insert()"
+              },
+                "answer": "A"
+              },
+              {
+                "question": "What is a closure in JavaScript?",
+                "options": {
+                "A": "A function that returns a value",
+                "B": "A function that has access to variables from its outer (enclosing) function's scope, even after the outer function has finished executing",
+                "C": "A loop that iterates over an array",
+                "D": "A way to define a class"
+              },
+                "answer": "B"
+              },
+              {
+                "question": "What is the purpose of the 'addEventListener' method?",
+                "options": {
+                "A": "To create a new HTML element",
+                "B": "To attach an event handler to an element",
+                "C": "To modify the CSS of an element",
+                "D": "To remove an element from the DOM"
+              },
+                "answer": "B"
+              },
+              {
+                "question": "What is the difference between '==' and '===' in JavaScript?",
+                "options": {
+                "A": "'==' compares values, '===' compares values and types",
+                "B": "'===' compares values, '==' compares values and types",
+                "C": "There is no difference",
+                "D": "'==' is for strings, '===' is for numbers"
+              },
+                "answer": "A"
+              },
+              {
+                "question": "What is the purpose of the 'map()' method in JavaScript?",
+                "options": {
+                "A": "To filter an array",
+                "B": "To iterate over an array and create a new array with the results of a provided function",
+                "C": "To sort an array",
+                "D": "To reduce an array to a single value"
+              },
+                "answer": "B"
+              },
+              {
+                "question": "What is the purpose of JSON.stringify()?",
+                "options": {
+                "A": "To parse a JSON string",
+                "B": "To convert a JavaScript object to a JSON string",
+                "C": "To create a new JSON object",
+                "D": "To validate a JSON string"
+              },
+                "answer": "B"
+              },
+              {
+                "question": "What is the purpose of the 'setTimeout()' function?",
+                "options": {
+                "A": "To execute a function repeatedly",
+                "B": "To execute a function after a specified delay",
+                "C": "To stop the execution of a function",
+                "D": "To create a new thread"
+              },
+                "answer": "B"
+              },
+              {
+                "question": "What is the output of `[1, 2, 3].pop()`?",
+                "options": {
+                "A": "[1, 2]",
+                "B": "[3]",
+                "C": "3",
+                "D": "[1, 2, 3]"
+                },
+                "answer": "C"
+              }
+            
+        ]
+}
+]
+}
